@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Golang on Hugo on Heroku! </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/categories/golang/index.xml</link>
+    <language>en-us</language>
+    
+    
+    <updated>Mon, 11 Aug 2014 01:07:33 UTC</updated>
+    
+    <item>
+      <title>using heroku buildpack hugo</title>
+      <link>http://localhost:1313/posts/using-heroku-buildpack-hugo</link>
+      <pubDate>Mon, 11 Aug 2014 01:07:33 UTC</pubDate>
+      
+      <guid>http://localhost:1313/posts/using-heroku-buildpack-hugo</guid>
+      <description>
+
+&lt;p&gt;This is a &lt;a href=&#34;https://devcenter.heroku.com/articles/buildpacks&#34;&gt;Heroku buildpack&lt;/a&gt;
+for sites powered by &lt;a href=&#34;https://github.com/spf13/hugo&#34;&gt;Hugo&lt;/a&gt;.
+It uses the latest stable version of Hugo.&lt;/p&gt;
+
+&lt;h1 id=&#34;toc_0&#34;&gt;Usage&lt;/h1&gt;
+
+&lt;p&gt;Create a Heroku application using this buildpack:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;$ heroku create --buildpack https://github.com/roperzh/heroku-buildpack-hugo.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or configure your existent application:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;$ heroku config:add BUILDPACK_URL=&amp;quot;https://github.com/roperzh/heroku-buildpack-hugo.git&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then simply git push to heroku and open your application!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;$ git push heroku master
+$ heroku open
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;toc_1&#34;&gt;Using themes&lt;/h1&gt;
+
+&lt;p&gt;This buildpack provides a simple api to use custom themes, just add a &lt;code&gt;.hugotheme&lt;/code&gt;
+file in the root of your application with the url of your theme.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Example&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To fetch the great &lt;a href=&#34;https://github.com/spf13/hyde.git&#34;&gt;hyde&lt;/a&gt; theme:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://github.com/spf13/hyde.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[Here]() is an example application, and [here]() is the code.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_2&#34;&gt;Alternative method&lt;/h2&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t like the idea of a &lt;code&gt;.hugotheme&lt;/code&gt; file, you can simply manage your
+themes with &lt;a href=&#34;http://git-scm.com/book/en/Git-Tools-Submodules&#34;&gt;git submodules&lt;/a&gt;.
+Heroku will take care to fetch all the submodules in your project.&lt;/p&gt;
+
+&lt;h1 id=&#34;toc_3&#34;&gt;Important notes&lt;/h1&gt;
+
+&lt;p&gt;Don&amp;rsquo;t forget to configure your hugo &lt;code&gt;baseurl&lt;/code&gt; with the url of your application.&lt;/p&gt;
+
+&lt;h1 id=&#34;toc_4&#34;&gt;Contributing&lt;/h1&gt;
+
+&lt;p&gt;1- Fork it&lt;/p&gt;
+
+&lt;p&gt;2- Create your feature branch (git checkout -b my-new-feature)&lt;/p&gt;
+
+&lt;p&gt;3- Commit your changes (git commit -am &amp;lsquo;Add some feature&amp;rsquo;)&lt;/p&gt;
+
+&lt;p&gt;4- Push to the branch (git push origin my-new-feature)&lt;/p&gt;
+
+&lt;p&gt;5- Create new Pull Request&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,4 @@
+baseurl = "http://immense-hollows-6319.herokuapp.com/"
+languageCode = "en-us"
+title = "Hugo on Heroku!"
+theme = "hyde"

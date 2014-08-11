@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Hugo on Heroku! &middot; Hugo on Heroku! </title>
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="Hugo on Heroku!" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>Hugo on Heroku!</h1>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="http://localhost:1313/posts/using-heroku-buildpack-hugo"> using heroku buildpack hugo </a></li>
+      
+    </ul>
+
+    <p>&copy; 2014. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="posts">
+
+      
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://localhost:1313/posts/using-heroku-buildpack-hugo">
+        using heroku buildpack hugo
+      </a>
+    </h1>
+
+    <span class="post-date">Mon, Aug 11, 2014</span>
+
+    
+
+<p>This is a <a href="https://devcenter.heroku.com/articles/buildpacks">Heroku buildpack</a>
+for sites powered by <a href="https://github.com/spf13/hugo">Hugo</a>.
+It uses the latest stable version of Hugo.</p>
+
+<h1 id="toc_0">Usage</h1>
+
+<p>Create a Heroku application using this buildpack:</p>
+
+<pre><code class="bash">$ heroku create --buildpack https://github.com/roperzh/heroku-buildpack-hugo.git
+</code></pre>
+
+<p>or configure your existent application:</p>
+
+<pre><code class="bash">$ heroku config:add BUILDPACK_URL=&quot;https://github.com/roperzh/heroku-buildpack-hugo.git&quot;
+</code></pre>
+
+<p>Then simply git push to heroku and open your application!</p>
+
+<pre><code class="bash">$ git push heroku master
+$ heroku open
+</code></pre>
+
+<h1 id="toc_1">Using themes</h1>
+
+<p>This buildpack provides a simple api to use custom themes, just add a <code>.hugotheme</code>
+file in the root of your application with the url of your theme.</p>
+
+<p><strong><em>Example</em></strong></p>
+
+<p>To fetch the great <a href="https://github.com/spf13/hyde.git">hyde</a> theme:</p>
+
+<pre><code>https://github.com/spf13/hyde.git
+</code></pre>
+
+<p>[Here]() is an example application, and [here]() is the code.</p>
+
+<h2 id="toc_2">Alternative method</h2>
+
+<p>If you don&rsquo;t like the idea of a <code>.hugotheme</code> file, you can simply manage your
+themes with <a href="http://git-scm.com/book/en/Git-Tools-Submodules">git submodules</a>.
+Heroku will take care to fetch all the submodules in your project.</p>
+
+<h1 id="toc_3">Important notes</h1>
+
+<p>Don&rsquo;t forget to configure your hugo <code>baseurl</code> with the url of your application.</p>
+
+<h1 id="toc_4">Contributing</h1>
+
+<p>1- Fork it</p>
+
+<p>2- Create your feature branch (git checkout -b my-new-feature)</p>
+
+<p>3- Commit your changes (git commit -am &lsquo;Add some feature&rsquo;)</p>
+
+<p>4- Push to the branch (git push origin my-new-feature)</p>
+
+<p>5- Create new Pull Request</p>
+
+  </div>
+  
+</div>
+
+
+  </body>
+</html>
